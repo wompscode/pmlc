@@ -1,0 +1,74 @@
+<html>
+    <head>
+        <title>PMLC</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link id="darkCSS" rel="stylesheet" href="dark.css" disabled>
+        <link id="lightCSS" rel="stylesheet" href="light.css">
+    </head>
+    <body>
+        <div class="top">
+            <div>
+                <span id="saveButton"><button onclick="saveData();">Save Data</button> | </span>
+                <span><button onclick="resetGame();">Reset Data</button> | </span>
+                <span><input type="checkbox" id="autosave" onchange="dataChange();" checked="checked"/> Autosave | </span>
+                <span><input type="number" onchange="change()" id="pcount" min="2" max="4"> Players</span>
+            </div>
+            <div>
+                <span><button id="themeButton" onclick="toggleTheme(this);">🌙</button></span>
+                <span><button onclick="clearData();">Clear Data</button></span>
+            </div>
+
+        </div>
+        <div class="container">
+            <div id="player_1" class="player">
+                <div class="inner">
+                    <div>
+                        <span><button onclick="flip(1)">↺</button></span>
+                        <div onclick="setName(1)" id="name_1" class="main">PLAYER_1</div>
+                        <span><button class="sbutton" onclick="increase(1, true)">+</button><div title="Poison Counters" class="main" id="pcon_1">0</div><button class="sbutton" onclick="decrease(1, true)">-</button></span>
+                    </div>
+                    <div class="main"><button onclick="increase(1, false)">+</button></div>
+                    <div class="main counter" id="counter_1">Current</div>
+                    <div class="main"><button onclick="decrease(1, false)">-</button></div>
+                </div>
+            </div>
+            <div id="player_2" class="player">
+                <div class="inner">
+                    <div>
+                        <span><button onclick="flip(2)">↺</button></span><div id="name_2" onclick="setName(2)" class="main">PLAYER_2</div>
+                        <span><button class="sbutton" onclick="increase(2, true)">+</button><div title="Poison Counters" class="main" id="pcon_2">0</div><button class="sbutton" onclick="decrease(2, true)">-</button></span>
+                    </div>
+                    <div class="main"><button onclick="increase(2, false)">+</button></div>
+                    <div class="main counter" id="counter_2">Current</div>
+                    <div class="main"><button onclick="decrease(2, false)">-</button></div>
+                </div>
+            </div>
+            <div id="player_3" class="player">
+                <div class="inner">
+                    <div>
+                        <span><button onclick="flip(3)">↺</button></span><div id="name_3" onclick="setName(3)" class="main">PLAYER_3</div>
+                        <span><button class="sbutton" onclick="increase(3, true)">+</button><div title="Poison Counters" class="main" id="pcon_3">0</div><button class="sbutton" onclick="decrease(3, true)">-</button></span>
+                    </div>
+                    <div class="main"><button onclick="increase(3, false)">+</button></div>
+                    <div class="main counter" id="counter_3">Current</div>
+                    <div class="main"><button onclick="decrease(3, false)">-</button></div>
+                </div>
+            </div>
+            <div id="player_4" class="player">
+                <div class="inner">
+                    <div>
+                        <span><button onclick="flip(4)">↺</button></span><div id="name_4" onclick="setName(4)" class="main">PLAYER_4</div>
+                        <span><button class="sbutton" onclick="increase(4, true)">+</button><div title="Poison Counters" class="main" id="pcon_4">0</div><button class="sbutton" onclick="decrease(4, true)">-</button></span>
+                    </div>
+                    <div class="main"><button onclick="increase(4, false)">+</button></div>
+                    <div class="main counter" id="counter_4">Current</div>
+                    <div class="main"><button onclick="decrease(4, false)">-</button></div>
+                </div>
+            </div>
+        </div>
+        <noscript>
+            This requires JavaScript to function.
+        </noscript>
+        <script src="main.js"></script>
+    </body>
+</html>
